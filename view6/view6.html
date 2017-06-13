@@ -1,0 +1,92 @@
+<!--========================================
+VIEW 6 CODE
+=========================================-->
+
+<!-- IMAGE & PROMO TEXT -->
+<div class="container">
+	<div class="row">
+	
+		<div class="col-sm-6">
+			<div> 
+				<div class="caption">
+					<h3>Why not get in touch?</h3>
+					<p>The 365 Flicks Podcast is one the UK's leading movie podcasts, each episode delves deep into the world of cinema to bring you film reviews, features, interviews and more. Let us know what you think by getting in touch today!
+					</p>
+					<hr>
+				</div>
+				<img src="../images/contact_page.png" alt="Get in touch image" class="img-responsive">
+			</div>
+		</div>
+
+		<!-- CONTACT FORM -->
+
+		<div class="container">
+			<div class="col-sm-6">
+				<form name="contactForm" data-ng-submit="submit()" novalidate>
+
+				<h3>Why not drop us a line...</h3>
+				<!--{{contact}}-->
+
+				<!-- FIRST NAME -->
+				<div class="form-group" ng-class="{ 'has error' : contactForm.firstName.$invalid && !contactForm.firstName.$pristine }">
+					<label>First Name</label>
+					<input type="text" name="firstName" class="form-control" data-ng-model="contact.firstName" ng-required="true" placeholder="Tell us your First Name" ng-minlength="3" ng-maxlength="12">
+					<p data-ng-show="contactForm.firstName.$error.minlength" class="help-block">Your first name is too short.</p>
+					<p data-ng-show="contactForm.firstName.$error.maxlength" class="help-block">Your first name is too long.</p>
+				</div>
+
+				<!-- LAST NAME -->
+				<div class="form-group" ng-class="{ 'has error' : contactForm.lastName.$invalid && !contactForm.lastName.$pristine }">
+					<label>Last Name</label>
+					<input type="text" name="lastName" class="form-control" data-ng-model="contact.lastName" ng-required="true" placeholder="Tell us your Last Name" ng-minlength="3" ng-maxlength="12">
+					<p data-ng-show="contactForm.lastName.$error.minlength" class="help-block">Your last name is too short.</p>
+					<p data-ng-show="contactForm.lastName.$error.maxlength" class="help-block">Your last name is too long.</p>
+				</div>
+
+				<!-- EMAIL -->
+				<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" data-ng-model="contact.email" ng-required="true" placeholder="Tell us your Email" >
+					<p data-ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email</p>
+				</div>
+
+				<!-- COMMENTS -->
+				<div class="form-group">
+					<label form="exampleTextarea">What you gotta say?</label>
+					<textarea name="comments" class="form-control" data-ng-model="contact.comments" id="Textarea" placeholder="Type your comments here" rows="2" ng-required="true"></textarea>
+				</div>
+
+				<label>Who are you?</label>
+
+				<!-- TYPE OF CONTACT -->
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					A fan
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+					Press/Media
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+					Potential Interviewee
+					</label>
+				</div>
+
+				<hr>
+
+				<!-- SUBMIT BUTTON -->
+				<button type="submit" class="btn btn-365" data-ng-disabled="contactForm.$invalid">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>

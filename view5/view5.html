@@ -1,0 +1,133 @@
+<!--========================================
+VIEW 5 CODE
+=========================================-->
+
+<!-- IMAGE & PROMO TEXT -->
+<div class="container">
+	<div class="row">
+	
+	<div class="col-sm-6">
+					<div> 
+						<div class="caption">
+							<h3>Sign up to our newsletter</h3>
+							<p>If you want the latest and most exciting movie news, reviews, exclusive interviews and extra special content delivered right to your inbox, then go ahead and sign up today and get BANG up to date...
+							</p>
+							<hr>
+						</div>
+						<img src="../images/newsletter_page.png" alt="Get in touch image" class="img-responsive">
+					</div>
+				</div>
+	
+		<!-- CONTACT FORM -->
+		<div class="container">
+			<div class="col-sm-6">
+				<form name="signUpForm" data-ng-submit="submit()" novalidate>
+
+				<h3>Sign up to our newsletter</h3>
+				<!--{{contact}}-->
+
+				<!-- FIRST NAME -->
+				<div class="form-group" ng-class="{ 'has error' : signUpForm.firstName.$invalid && !signUpForm.firstName.$pristine }">
+					<label>First Name</label>
+					<input type="text" name="firstName" class="form-control" data-ng-model="signUp.firstName" ng-required="true" placeholder="Tell us your First Name" ng-minlength="3" ng-maxlength="12">
+					<p data-ng-show="signUpForm.firstName.$error.minlength" class="help-block">Your first name is too short.</p>
+					<p data-ng-show="signUpForm.firstName.$error.maxlength" class="help-block">Your first name is too long.</p>
+				</div>
+
+				<!-- LAST NAME -->
+				<div class="form-group" ng-class="{ 'has error' : signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine }">
+					<label>Last Name</label>
+					<input type="text" name="lastName" class="form-control" data-ng-model="signUp.lastName" ng-required="true" placeholder="Tell us your Last Name" ng-minlength="3" ng-maxlength="12">
+					<p data-ng-show="signUpForm.lastName.$error.minlength" class="help-block">Your last name is too short.</p>
+					<p data-ng-show="signUpForm.lastName.$error.maxlength" class="help-block">Your last name is too long.</p>
+				</div>
+
+				<!-- EMAIL -->
+				<div class="form-group" ng-class="{ 'has-error' : signUpForm.email.$invalid && !signUpForm.email.$pristine }">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" data-ng-model="signUp.email" ng-required="true" placeholder="Tell us your Email" >
+					<p data-ng-show="signUpForm.email.$invalid && !signUpForm.email.$pristine" class="help-block">Enter a valid email</p>
+				</div>
+				
+				<!-- LOCATION -->
+				<div class="form-group" ng-class="{ 'has-error' : signUpForm.location.$invalid && !signUpForm.location.$pristine }">
+					<label>Location</label>
+					<input type="text" name="location" class="form-control" data-ng-model="signUp.location" ng-required="true" placeholder="Where do you live?" >
+					<p data-ng-show="signUpForm.location.$invalid && !signUpForm.location.$pristine" class="help-block">Enter your home country</p>
+				</div>
+				
+				<!-- FAV MOVIE -->
+				<div class="form-group" ng-class="{ 'has-error' : signUpForm.favMovie.$invalid && !signUpForm.favMovie.$pristine }">
+					<label>What's your favourite movie?</label>
+					<input type="text" name="favMovie" class="form-control" data-ng-model="signUp.favMovie" ng-required="true" placeholder="Tell us your favourite movie" >
+					<p data-ng-show="signUpForm.favMovie.$invalid && !signUpForm.favMovie.$pristine" class="help-block">Enter your favourite movie?</p>
+				</div>
+				
+				<!-- HATE MOVIE -->
+				<div class="form-group" ng-class="{ 'has-error' : signUpForm.hateMovie.$invalid && !signUpForm.hateMovie.$pristine }">
+					<label>What's your most hated movie?</label>
+					<input type="text" name="hateMovie" class="form-control" data-ng-model="signUp.hateMovie" ng-required="true" placeholder="Tell us your most hated movie" >
+					<p data-ng-show="signUpForm.hateMovie.$invalid && !signUpForm.hateMovie.$pristine" class="help-block">What is your most hated movie?</p>
+				</div>
+				
+				<!-- HOW MANY MOVIES PER WEEK -->
+				<div class="form-group">
+					<label>How many movies do you watch per week?</label>
+						<select list="numbers" name="numMovies" class="form-control" data-ng-model="signUp.numMovies" ng-required="true">
+							<option></option>
+							<option>1 - 5</option>
+							<option>6 - 10</option>
+							<option>11 - 15</option>
+							<option>16 - 20</option>
+						</select>
+					<p data-ng-show="signUpForm.numMovies.$invalid && !signUpForm.numMovies.$pristine" class="help-block">How much of a movie buff are you?</p>
+				</div>
+				
+				<!-- DO YOU PLAY VIDEO GAMES? -->
+				<div class="form-group">
+					<label>Do you play video games?</label>
+						<select list="numbers" name="vidGames" class="form-control" data-ng-model="signUp.vidGames" ng-required="true">
+							<option>Hell Yeah!</option>
+							<option>God No!</option>
+						</select>
+					<p data-ng-show="signUpForm.vidGames.$invalid && !signUpForm.vidGames.$pristine" class="help-block">Do you like video games?</p>
+				</div>
+				
+
+				<label>Who are you?</label>
+
+				<!-- TYPE OF CONTACT -->
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					A fan
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+					Press/Media
+					</label>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+					Potential Interviewee
+					</label>
+				</div>
+
+				<hr>
+
+				<!-- SUBMIT BUTTON -->
+				<button type="submit" class="btn btn-365" data-ng-disabled="signUpForm.$invalid">Send</button>
+				</form>
+			</div>
+		</div>
+			
+				
+			</div>
+		</div>
+
+<hr>

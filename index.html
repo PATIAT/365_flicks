@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!--class="no-js">-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<base href="./"> 
+		<title>365 Flicks Podcast</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="app.css">
+		<link rel="icon" href="images/Favicon.png" type="image/png" sizes="16x16">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Fonts from Google -->
+		<link href="https://fonts.googleapis.com/css?family=Fugaz+One|Oswald|Pacifico" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<!-- Angular -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		<!-- Angular Route CDN for faster loading-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+		<!-- Angular Animate for animations-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+	</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+	<div class="container"> 
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="#!/view1"><img src="images/365 Flicks Logo.png" alt="365 Flicks Podcast">
+			</a> 
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+			<li ng-class="{ active: isActive('#!/View1') }"><a class="nav-link" href="#!/view1">HOME</a> </li>
+			<li ng-class="{ active: isActive('#!/View2') }"><a class="nav-link" href="#!/view2">ABOUT</a> </li>
+			<li ng-class="{ active: isActive('#!/View3') }"><a class="nav-link" href="#!/view3">REVIEWS</a> </li>
+			<li ng-class="{ active: isActive('#!/View4') }"><a class="nav-link" href="#!/view4">EPISODES</a> </li>
+			<li ng-class="{ active: isActive('#!/View5') }"><a class="nav-link" href="#!/view5">NEWSLETTER</a> </li>
+			<li ng-class="{ active: isActive('#!/View6') }"><a class="nav-link" href="#!/view6">CONTACT</a> </li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- DYNAMIC VIEW -->
+<div ng-view></div>
+
+<!-- FOOTER CONTENT -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<h2 class="pagestrap">CONTACT US</h2>
+				<address>
+				<strong>THREE-SIX-FIVE Flicks Podcast &trade;</strong>
+				<br>Northumberland<br>United Kingdom<br>
+				<abbr title="Email">E:</abbr> info@365flickspodcast.co.uk
+				</address>
+				<h4>Lets get social</h4>
+			<div class="row">
+				<div class="col-xs-2"><a href="https://www.facebook.com/365Flickscom/"><img src="images/Facebook.png" alt="Facebook logo"></a></div>
+				<div class="col-xs-2"><a href="https://twitter.com/365FlicksPod"><img src="images/Twitter.png" alt="Twitter logo"></a></div>
+				<div class="col-xs-2"><a href="https://www.instagram.com/365flickspod/?hl=en"><img src="images/Instagram.png" alt="Instagram logo"></a>
+				</div>     
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<h2 class="pagestrap">DOWNLOAD TODAY</h2>
+				<div class="media">
+				<div class="media-left"> <a href="https://itunes.apple.com/us/podcast/365flicks-podcast/id1030800334?mt=2"> <img class="media-object" src="images/iTunes.png" alt="iTunes logo"> </a> </div>
+				<div class="media-body">
+				<h4 class="media-heading">on iTunes</h4>
+				HEY! Guess what? We're on iTunes so if you're on the apple side of the force get yourself on iTunes and download at least one episode. YOU WON'T REGRET IT!</div>
+				</div>
+			<div class="media">
+				<div class="media-left"> <a href="https://play.google.com/store?hl=en_GB"> <img class="media-object" src="images/Google Play.png" alt="Google logo"> </a> </div>
+				<div class="media-body">
+				<h4 class="media-heading">on Android</h4>
+				HEY! Guess what? We're on Google Play too so if you're on the Android side of the force get yourself on Google Play and download our latest episode now. YOU'LL LOVE IT!</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<footer class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<p class="copyright pagestrap">Copyright © THREE-SIX-FIVE Flicks Podcast &trade;. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Bootstrap Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--JS files for routing, effects and views -->
+<script src="app.js"></script>
+<script src="effects.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="view3/view3.js"></script>
+<script src="view4/view4.js"></script>
+<script src="view5/view5.js"></script>
+<script src="view6/view6.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>

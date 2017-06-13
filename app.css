@@ -1,0 +1,279 @@
+/*========================================= 
+MAIN APP STYLING
+=========================================*/
+/*=========Navbar-brand sizing==========*/
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 5px 10px;
+  width: auto;
+}
+
+.pagestrap {
+	font-family: 'Oswald', 'bold', sans-serif;
+}
+
+#hide-vid {
+	display: none;
+}
+
+.complete {
+    display: none;
+}
+
+.more {
+    background: lightblue;
+    color: navy;
+    font-size: 13px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.nav-link {
+	font-family: 'Oswald', 'bold', sans-serif;
+	color: darkorange;
+}
+
+.navbar-brand {
+	color: darkorange;
+}
+
+body {
+	padding-top: 60px;
+}
+
+
+/*========================================= 
+VIEW ONE STYLING 
+=========================================*/
+
+/*=========365 Carousel==========*/
+
+.fade-carousel {
+    position: relative;
+    height: 80vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 80vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+
+/*=========Carousel Headers==========*/
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/*=========Overlay==========*/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/*=========Buttons==========*/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-365,
+.btn.btn-365:hover,
+.btn.btn-365:focus {
+    color: #f5f5f5;
+    background-color: #FF4338;
+    border-color: #FF4338;
+    outline: none;
+    margin: 20px auto;
+}
+
+/*=========Carousel Images==========*/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 80vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url("images/hacksaw_ridge_2017.jpg"); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url("images/filming.jpeg");
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url("images/new commumication.jpeg");
+}
+
+/*=========Carousel Media Queries==========*/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+/*========================================= 
+VIEW TWO STYLING 
+=========================================*/
+
+
+
+
+
+/*========================================= 
+VIEW THREE STYLING 
+=========================================*/
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+/*=========Style the tab==========*/
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/*=========Style tab buttons==========*/
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/*=========Change bg on hover==========*/
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/*=========Create an active/current tablink class==========*/
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/*=========Style tab content==========*/
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.rating {
+	position: absolute;
+    left: 410px;
+    top: 175px;
+}
+
+.para-review {
+	width: 93%;
+	text-align: justify;
+}
+
+.video-trailer {
+    position: relative;
+    padding: 45px 15px 15px 15px;
+    margin: 0 -15px 15px;
+}
+
+#btn-menu {
+	font-family: 'Oswald', 'bold', sans-serif;
+}
+
+.cast-table {
+	width: 93%;
+	text-align: justify;
+}
+
+#jumbotron-3 {
+background-image: url("images/jumbo-image.png");
+background-size: cover;
+}
+
+/*========================================= 
+VIEW FOUR STYLING 
+=========================================*/
+
+
+
+
+
+/*========================================= 
+VIEW FIVE STYLING 
+=========================================*/
+
+
+
+
+
+/*========================================= 
+VIEW SIX STYLING 
+=========================================*/
+@charset "UTF-8";
+#radio-btns {
+	padding-bottom: 5px;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+	border: 2px solid red;
+}
+
+input=[disabled="disabled"]{
+	opacity: 0.4;
+	cursor: not-allowed !important;
+}
